@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: property_mangement_development
   pool: 5
-  username: property_mangement
+  username:
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: property_mangement_test
   pool: 5
-  username: property_mangement
+  username:
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: property_mangement_production
   pool: 5
-  username: property_mangement
+  username:
   password:
