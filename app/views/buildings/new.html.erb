@@ -1,0 +1,10 @@
+<h2>Add a building</h2>
+
+  <%= simple_form_for @building do |f| %>
+    <%= f.input :address, label: 'Street Address' %>
+    <%= f.input :city %>
+    <%= f.input :state, :collection => ['AL','AK', 'AZ','AR','CA','CO','CT','DE','FL','GA','HI', 'ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE', 'NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY']  %>
+    <%= f.input :postal, label: 'Zip Code'%>
+    <%= f.input :description %>
+    <%= f.submit 'Add Building' %>
+  <% end %>

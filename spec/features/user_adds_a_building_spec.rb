@@ -27,15 +27,15 @@ feature 'real estate agent adds a new building', %q{
     click_on 'Add Building'
 
     expect(page).to have_content 'Building was successfully added'
-    expect(LifeHack.count).to eq(prev_count + 1)
+    expect(Building.count).to eq(prev_count + 1)
   end
 
     scenario 'Invalid building' do
-      prev_count = Building.count
       visit new_building_path
 
       click_on 'Add Building'
-      expect(LifeHack.count).to eq(prev_count)
+      expect(page).to have_content 'can\'t be blank'
+
 
   end
 
