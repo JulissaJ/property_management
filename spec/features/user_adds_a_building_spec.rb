@@ -16,6 +16,7 @@ feature 'real estate agent adds a new building', %q{
 # Upon successfully creating a building, I am redirected so that I can record another building.
 
   scenario 'successfully adds a building' do
+    owner = Owner.create(first_name:'Julissa', last_name: 'Jansen', email:'julissa.jansen@gmail.com')
     prev_count = Building.count
     visit new_building_path
     fill_in 'Street Address', with: '933 Essex Street'
@@ -23,6 +24,7 @@ feature 'real estate agent adds a new building', %q{
     select 'MA', from: 'State'
     fill_in 'Zip Code', with: '01841'
     fill_in 'Description', with: 'Up-and-coming neighborhood.'
+    select "Julissa Jansen", from: "Owner"
 
     click_on 'Add Building'
 
