@@ -6,5 +6,8 @@
     <%= f.input :state, :collection => ['AL','AK', 'AZ','AR','CA','CO','CT','DE','FL','GA','HI', 'ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE', 'NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY']  %>
     <%= f.input :postal, label: 'Zip Code'%>
     <%= f.input :description %>
+    <%= f.label :owner_id %>
+    <%= f.collection_select :owner_id, Owner.all, :id, :full_name,
+    include_blank: true %><br>
     <%= f.submit 'Add Building' %>
   <% end %>
