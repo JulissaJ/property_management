@@ -47,33 +47,3 @@ feature 'real estate associate adds a new building owner', %q{
   end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#     scenario 'Invalid building' do
-#       visit new_building_path
-
-#       click_on 'Add Building'
-#       expect(page).to have_content 'can\'t be blank'
-
-
-#   end
-
-# end
